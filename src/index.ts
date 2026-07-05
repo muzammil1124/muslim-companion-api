@@ -16,8 +16,11 @@ app.get("/health", (_req, res) => {
 
 app.use("/api", mosqueRouter);
 
-const port = parseInt(process.env.PORT || "8080");
-app.listen(port, () => {
+const port = parseInt(process.env.PORT || "3000");
+console.log(`Starting server on port ${port}...`);
+console.log(`Environment: ${process.env.NODE_ENV}`);
+
+app.listen(port, "0.0.0.0", () => {
   console.log(`Muslim Companion API listening on port ${port}`);
 });
 
