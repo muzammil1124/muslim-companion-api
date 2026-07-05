@@ -10,7 +10,8 @@ await build({
   format: "cjs",
   outfile: "dist/index.cjs",
   define: { "process.env.NODE_ENV": '"production"' },
-  minify: true,
+  minify: false,
+  external: ["cheerio"],
   logLevel: "info",
 });
 
